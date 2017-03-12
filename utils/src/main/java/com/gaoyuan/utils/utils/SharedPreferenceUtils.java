@@ -1,8 +1,7 @@
 package com.gaoyuan.utils.utils;
 
+import android.content.Context;
 import android.content.SharedPreferences;
-
-import com.gaoyuan.utils.App;
 
 /**
  * Created by dn on 2017/2/20.
@@ -14,8 +13,8 @@ public class SharedPreferenceUtils {
     private SharedPreferences sharedPreference;
     private SharedPreferences.Editor edit;
 
-    public SharedPreferenceUtils(String key) {
-        sharedPreference = App.app.getSharedPreferences(key, App.app.MODE_PRIVATE);
+    public SharedPreferenceUtils(Context  context,String key) {
+        sharedPreference = context.getSharedPreferences(key, context.MODE_PRIVATE);
     }
 
     /**
